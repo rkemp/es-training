@@ -2,6 +2,9 @@
   "settings": {
     "number_of_shards": 1,
     "index": {
+      "mapper": {
+        "dynamic": false
+      },
       "analysis": {
         "analyzer": {
           "edge_ngram_analyzer" : {
