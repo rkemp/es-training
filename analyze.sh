@@ -1,0 +1,1 @@
+curl -XGET 'http://localhost:9200/_analyze?analyzer=standard&pretty' -d "$1"

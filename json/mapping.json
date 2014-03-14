@@ -1,0 +1,55 @@
+{
+  "settings": {
+    "number_of_shards": 1
+  },
+  "mappings": {
+    "recruit": {
+      "_routing" : {
+        "required" : true,
+        "path" : "company_id"
+      },
+      "properties": {
+        "company_id": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "formatted_name": {
+          "type": "string",
+          "analyzer": "standard"
+        },
+        "position_created_at": {
+          "type": "date"
+        },
+        "position_title": {
+          "type": "multi_field",
+          "fields": {
+            "position_title": {
+              "type": "string",
+              "analyzer": "standard"
+            },
+            "raw": {
+              "type": "string",
+              "index": "not_analyzed"
+            }
+          }
+        },
+        "skills": {
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "former_company": {
+          "properties": {
+            "url": {
+              "type": "string",
+              "index": "not_analyzed"
+            },
+            "name": {
+              "type": "string",
+              "analyzer": "standard"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+curl -XGET 'localhost:9200/companies/recruit/_search?pretty' -d"$1"

@@ -1,0 +1,9 @@
+{
+  "facets": {
+    "former_company": {
+      "terms": {
+        "field": "former_company.url"
+      }
+    }
+  }
+}

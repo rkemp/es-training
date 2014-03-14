@@ -1,0 +1,21 @@
+{
+  "filter": {
+    "terms": {
+      "former_company.url": ["caramail"]
+    }
+  },
+  "facets": {
+    "former_company": {
+      "facet_filter": {
+        "not": {
+          "terms": {
+            "former_company.url": ["caramail"]
+          }
+        }
+      },
+      "terms": {
+        "field": "former_company.url"
+      }
+    }
+  }
+}

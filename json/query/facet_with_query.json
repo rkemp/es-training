@@ -1,0 +1,21 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "match_all": {}
+      },
+      "filter": {
+        "term": {
+          "former_company.url": "figaroclassifieds"
+        }
+      }
+    }
+  },
+  "facets": {
+    "former_company": {
+      "terms": {
+        "field": "former_company.url"
+      }
+    }
+  }
+}

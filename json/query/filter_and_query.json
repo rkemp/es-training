@@ -1,0 +1,16 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "query_string": {
+          "query": "position_title:platform"
+        }
+      },
+      "filter": {
+        "term": {
+          "former_company.url": "figaroclassifieds"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "filter": {
+    "and": [
+      {
+        "term": {
+          "former_company.url": "figaroclassifieds"
+        }
+      },
+      {
+        "range": {
+          "position_created_at": {
+            "from": "2012-01-01",
+            "to": "2012-12-31"
+          }
+        }
+      }
+    ]
+  }
+}
