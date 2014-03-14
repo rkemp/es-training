@@ -1,1 +1,1 @@
-curl -XGET 'http://localhost:9200/_analyze?analyzer=standard&pretty' -d "$1"
+curl -XGET 'http://localhost:9200/companies/_analyze?analyzer=edge_ngram_analyzer&pretty' -d "$1"

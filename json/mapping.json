@@ -1,12 +1,33 @@
 {
   "settings": {
-    "number_of_shards": 1
+    "number_of_shards": 1,
+    "index": {
+      "analysis": {
+        "analyzer": {
+          "edge_ngram_analyzer" : {
+            "tokenizer" : "edge_ngram_tokenizer"
+          },
+          "snowball_analyzer": {
+            "type": "snowball",
+            "language": "English"
+          }
+        },
+        "tokenizer" : {
+          "edge_ngram_tokenizer" : {
+            "type" : "edgeNGram",
+            "min_gram" : "3",
+            "max_gram" : "5",
+            "token_chars": [ "letter", "digit" ]
+          }
+        }
+      }
+    }
   },
   "mappings": {
     "recruit": {
-      "_routing" : {
-        "required" : true,
-        "path" : "company_id"
+      "_routing": {
+        "required": true,
+        "path": "company_id"
       },
       "properties": {
         "company_id": {
